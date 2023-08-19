@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+{% block styles %}
+
+{% endblock %}
+{% block content %}
+
+
+
+
+
+
+
+{% load crispy_forms_tags %}
+
+
+<form action="/add_blogs/" enctype="multipart/form-data" method="POST"> {% csrf_token %}
+    <div class="container mt-4">
+        {{ form.as_p }}
+        <button class="btn btn-primary">Add Blog</button>
+    </div>
+</form>
+
+
+{% endblock content %}

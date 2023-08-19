@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+{% block styles %}
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container-fluid" style="background-color: #EEF5FF;">
+
+    <div class="container">
+        <div class="row" style="margin: auto;height: 100vh;text-align: center;align-items: center;">
+            <div class="col-12">
+                <div class="row ">
+                    <div class="col">
+                        <h1 style="color: #4F6AFF;">Startup Success Predictor</h1>
+
+                    </div>
+
+                </div>
+                <form method="GET" style="text-align: center;margin-top: 50px;">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.name.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.name}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.start.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.start}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.category.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.category}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.relationship_num.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.relationship_num}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.avg_participants.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.avg_participants}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.milestone_num.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.milestone_num}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.first_milestone.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.first_milestone}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.last_milestone.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.last_milestone}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col">
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.total_fund.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        <span class="input-group-text">$</span>
+                                        {{form.total_fund}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.first_funding.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.first_funding}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.last_funding.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.last_funding}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                <div class="col-6 d-flex justify-content-start">
+                                    <label style="font-size: 17px;">{{ form.funding_round_num.label_tag }}</label>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group w-100">
+                                        {{form.funding_round_num}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                        <div class="col-8 d-flex justify-content-start">
+                                            <label style="font-size: 17px;">{{ form.has_angel.label_tag }}</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group w-100">
+                                                {{form.has_angel}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                        <div class="col-8 d-flex justify-content-start">
+                                            <label style="font-size: 17px;">{{ form.has_vc.label_tag }}</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group w-100">
+                                                {{form.has_vc}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                        <div class="col-8 d-flex justify-content-start">
+                                            <label style="font-size: 17px;">{{ form.has_A.label_tag }}</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group w-100">
+                                                {{form.has_A}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                        <div class="col-8 d-flex justify-content-start">
+                                            <label style="font-size: 17px;">{{ form.has_B.label_tag }}</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group w-100">
+                                                {{form.has_B}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                        <div class="col-8 d-flex justify-content-start">
+                                            <label style="font-size: 17px;">{{ form.has_C.label_tag }}</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group w-100">
+                                                {{form.has_C}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row" style="align-items: center;margin-bottom: 20px;">
+                                        <div class="col-8 d-flex justify-content-start">
+                                            <label style="font-size: 17px;">{{ form.has_D.label_tag }}</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="input-group w-100">
+                                                {{form.has_D}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 50px;">
+                            <div class="col d-flex justify-content-center">
+                                <button type="submit" onclick="" class="btn btn-lg"
+                                    style="background-color: #4F6AFF;color: white;">Predict
+                                    Success</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col d-flex justify-content-center">
+                        <h2 id="result" style="color: #4F6AFF;">{{show_result}}</h2>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<script>
+    function change_text(result) {
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+
+{% endblock content %}

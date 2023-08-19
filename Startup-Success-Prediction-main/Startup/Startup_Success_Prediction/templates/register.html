@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+{% block styles %}
+{% load socialaccount %}
+
+{% endblock %}
+{% block content %}
+
+
+
+{% if user.is_authenticated %}
+{% else %}
+
+
+
+{% load crispy_forms_tags %}
+
+<!--Login-->
+<div class="row g-0">
+    <div class="col-md-7 d-flex align-items-center d-flex justify-content-center" style="background-color: #EEF5FF;">
+        <div class="d-flex justify-content-center">
+            <img src="{% static 'register.jpg' %}" style="height: 70%;width: 70%;">
+        </div>
+
+
+    </div>
+    <div class="col-md-5 d-flex align-items-center" style="height: 95vh;background-color: #EEF5FF;">
+        <div class="card h-100 "
+            style=" width:100%;height: max-content;align-items: center;text-align: center;margin: auto; background-color: #EEF5FF;">
+            <div class="card-body d-flex align-items-center">
+                <div class="align-items-center ">
+                    <h2 class="d-flex align-items-center justify-content-center" style="margin-bottom: 40px;">SignUp
+                    </h2>
+
+
+                    <a href="{% provider_login_url 'google' %}"><button class="btn btn-light w-100  "><img
+                                src="/static/icon_google.png" class="image03"
+                                style="max-width: 5%;height: auto;margin-right: 10px;"><b>
+                                Signup with Google</b>
+                        </button></a>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+{% endif %}
+
+{% endblock content %}

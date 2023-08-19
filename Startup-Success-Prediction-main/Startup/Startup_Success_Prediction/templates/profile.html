@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+
+{% block css %}
+{% endblock %}
+{% block content %}
+
+<div class="container-fluid" style="background-color: #EEF5FF; height: 100vh;">
+    <div class="d-flex justify-content-center">
+        <h2 style="margin-top: 100px;">Profile</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <li>
+                    User Name: {{user.username}}
+
+                </li>
+                <li>
+                    User Email: {{user.email}}
+                </li>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

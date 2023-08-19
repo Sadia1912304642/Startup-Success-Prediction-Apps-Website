@@ -1,0 +1,29 @@
+body,
+html {
+  height: 100%;
+}
+
+.body {
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Luckiest Guy', sans-serif; */
+  color: black;
+}
+
+/* .bg { */
+/* The image used */
+/* background-color: #0173A7; */
+
+
+/* Full height */
+/* height: 100vh; */
+
+/* Center and scale the image nicely */
+/* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+/* } */
+
+.my-icon {
+  width: 10px;
+  height: 10px;
+}
